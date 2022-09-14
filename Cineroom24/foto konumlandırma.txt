@@ -1,0 +1,19 @@
+.sol-perde  /* foto konumlanırma için buna bak */
+   {
+     
+      background-image:url(../images/sol.jpg) ;
+	  background-repeat:no-repeat;
+	  background-position:left 0px;
+   }
+ 
+ 
+.sag-perde  /* foto konumlanırma için buna bak */
+   {
+      
+	  
+	 
+	  
+      background-image:url(../images/sag.jpg) ;
+	  background-repeat:no-repeat;
+	  background-position:right 0px;
+   } 

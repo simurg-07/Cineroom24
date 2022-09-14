@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cinema World| Rezervasyon</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/rezervasyon_form.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/cufon-replace.js" type="text/javascript"></script>
+<script src="js/Gill_Sans_400.font.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<script src="assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+<script src="assets/js/app/main.js"></script>
+</head>
+
+<body id="page6">
+<div class="tail-top">
+  <div class="tail-bottom">
+    <div id="main">
+      <div id="header">
+        <div class="row-1">
+          <div class="fleft"><a href="#"><img src="images/logomuz.jpg"></a></div>
+          <ul>
+            <li><a href="https://www.instagram.com/cineroom24/"><img src="images/insta.png" alt="" /></a></li>
+            <li><a href="https://twitter.com/cineroom24"><img src="images/twitter.png" alt="" /></a></li>
+            <li><a href="https://www.linkedin.com/in/cine-room-a0b2361bb/"><img src="images/linked-in.png" alt="" /></a></li>
+			<li><a href="https://m.facebook.com/CineRomm/"><img src="images/face.png" alt="" /></a></li>
+          </ul>
+        </div>
+		<button class="buttton" id="logout" type="button"> Çıkış </button> 
+		
+        <div class="row-2">
+          <ul>
+            <li><a href="index.html" >Anasayfa</a></li> <!-- /* hangi sayfadaysa o butonu işaretler*/ -->
+			<li><a href="Rezervasyon.html" class="active">Rezervasyon</a></li>
+			<li><a href="Filmler.html" >Filmler</a></li>
+            <li><a href="Hakkımızda.html" >Hakkimizda</a></li>
+            <li class="last"><a href="İletişm.html">Iletisim</a></li>
+            
+        </div>
+      
+	  <script>
+			 window.onload = function(){
+			 whatsapp_se_btn_phone = '+44 7591 996569'; 
+             whatsapp_se_btn_msg = 'Merhaba,Size nasıl yardımcı olabilirim?'; 
+             $(document.body).append('<div class="whatsapp-se-btn"></div>'),whatsapp_se_btn_base64="images/wp.png",
+            $(".whatsapp-se-btn").attr("style","position:fixed;bottom:15px;right:15px;overflow:hidden;background:#1bd741;color:#ffffff;text-align:center;padding:4px 4px;z-index:9999999;cursor:pointer;box-shadow:#000000 0 0 5px;border-radius:100px;"),$(".whatsapp-se-btn").html('<img style="width: 45px;" src="https://i.pinimg.com/originals/79/dc/31/79dc31280371b8ffbe56ec656418e122.png" alt="Whatsapp ile İletişime Geç" />'),$(".whatsapp-se-btn").attr("onclick",'location.href="https://wa.me/'+whatsapp_se_btn_phone+"?text="+whatsapp_se_btn_msg+'"');}
+    </script>
+      <div id="content">
+        
+        <div class="box">
+          <div class="border-right">
+            <div class="border-left">
+              <div class="inner">
+                <h3>Rezervasyon</h3>
+					<form class="dark-matter">
+					
+				
+				<label>
+				<span> Ad Soyad </span>
+				<input id="ad" type="text" name="name" placeholder=" Ad Soyad" />
+				</label>
+				
+			
+    
+				<label>
+				<span> Telefon Numarası</span>
+				<input id="telefon" type="text" name="numberno" placeholder="Telefon Numarası" />
+				</label>
+				
+				<label>
+				<span> Email</span>
+				<input id="email" type="email" name="email" placeholder="Email" />
+				</label>
+				
+				<p>
+				<label>
+				<span> Tarih </span>
+				<input id= "tarih" type="date" name="yas"> 
+				</label>
+				</p>
+				
+				<p>
+				<label>
+				<span> Tarih </span>
+				<input id= "saat" type="time" name="yas"> 
+				</label>
+				</p>
+				
+				<label>
+				<span> Yiyecek</span>
+				<select id = "yiyecek" name="seçiniz">
+				<option value="">-seçiniz-</option>
+				<option value="Mısır">Mısır</option>  <!-- box a basınca listeden seçenek seçiyosun -->
+				<option value="Tost">Tost</option>
+				<option value="Sandviç">Sandviç</option>
+				<option value="Kek">Kek</option>
+				<option value="Cips">Cips</option>
+				</select>
+				</label>
+				
+				<label>
+				<span> İçecek</span>
+				<select id ="içecek" name="seçiniz">
+				<option value="">-seçiniz-</option>
+				<option value="Coca Cola">Coca Cola</option>  <!-- box a basınca listeden seçenek seçiyosun -->
+				<option value="İce Tea">İce Tea</option>
+				<option value="Sprite">Sprite</option>
+				<option value="Ayran">Ayran</option>
+				<option value="Çay">Çay</option>
+				<option value="Kahve">Kahve</option>
+				</select>
+				</label>
+
+				<div>
+				<label>
+				<span> İstek </span>
+				<textarea id = "istek" style="resize:none;" rows="3" maxlength="255" name="message" placeholder="Açıklama"></textarea> <!-- textare nın boyutunu korur-->
+				</select>
+				</label>
+				</div>
+				
+				
+				<center>
+				<label>
+				<span>&nbsp;</span> 
+				<button class="button" id="sendToFireBase" type="button"> Talebi Gönder </button> 
+				<!-- eğer buttona type özelliğini vermezsen class form olduğu için butpna basınca sayfayı yeniler -->
+				</label> 
+				</center>
+				
+				</form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div id="footer">
+        <div class="left">
+          <div class="right">
+            <div class="footerlink">
+              <p class="lf">Copyright &copy; 2020 <a href="#">Cineroom24</a> - Tum Haklari saklidir</p>
+              <p class="rf">Tasarlayan <a href="#">Cineroom24</a></p>
+              <div style="clear:both;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END PAGE SOURCE -->
+
+</body>
+
+</body>
+</html>
